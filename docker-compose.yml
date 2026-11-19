@@ -1,0 +1,27 @@
+services:
+  backend:
+    build: ./backend
+    container_name: rolewise-backend
+    ports: ["8000:8000"]
+    environment:
+      DATABASE_URL: sqlite:////app/dbdata/rolewise.db
+      CHROMA_PATH: ./data/chroma
+      KNOWLEDGE_BASE_PATH: ./data/knowledge_base
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      FRONTEND_ORIGIN: http://localhost:5173
+    volumes:
+      - ./backend/data:/app/data
+      - rolewise-db:/app/dbdata
+    restart: unless-stopped
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: http://localhost:8000
+    container_name: rolewise-frontend
+    ports: ["5173:80"]
+    depends_on: [backend]
+    restart: unless-stopped
+
+volumes:
+  rolewise-db:

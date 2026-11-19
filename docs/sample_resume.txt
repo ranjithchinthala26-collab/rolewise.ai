@@ -1,0 +1,19 @@
+Aarav Kumar
+Junior Python Developer
+
+PROFILE
+Computer Science graduate interested in backend development and applied machine learning. Built academic and personal projects using Python, REST APIs and relational databases.
+
+SKILLS
+Python, FastAPI, SQL, MySQL, React, Git, Docker, REST API, Pandas, Scikit-learn.
+
+PROJECTS
+Support Ticket API — Developed REST endpoints for ticket creation, status updates and retrieval. Used FastAPI and MySQL to persist ticket records. Added request validation and tested endpoints with Postman.
+
+Book Recommendation Prototype — Explored data cleaning and basic similarity-based recommendations using Python and Pandas. Compared sample outputs and documented limitations.
+
+EDUCATION
+B.Tech Computer Science and Engineering
+
+INTERESTS
+Backend engineering, machine learning fundamentals, API design and software testing.

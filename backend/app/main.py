@@ -17,10 +17,10 @@ app = FastAPI(title=settings.app_name, version="1.0.0", description="Resume-awar
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        settings.frontend_origin,
-        "http://127.0.0.1:5173",
-        "http://localhost:5173",
+        "https://rolewise-ai-seven.vercel.app",
         "https://rolewise-pbtuedt2h-ranjithchinthala26-collab.vercel.app",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
     ],
     allow_credentials=True,
     allow_methods=["*"],
